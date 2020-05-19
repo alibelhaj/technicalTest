@@ -17,7 +17,7 @@ class RegistrationFormType extends AbstractType
     {
         $builder
             ->add('email', EmailType::class, [])
-            ->add('phone', TextType::class)
+            ->add('phone', TextType::class, ['label' => 'Numéro de téléphone'])
             ->add('password', RepeatedType::class, [
                 'type' => PasswordType::class,
                 'invalid_message' => 'le champ de mot de passe doivent correspondre.',
